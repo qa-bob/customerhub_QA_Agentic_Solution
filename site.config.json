@@ -1,23 +1,29 @@
 ﻿{
-    "name":  "CustomerHub",
-    "url":  "https://www.customerhub.com",
-    "description":  "",
-    "industry":  "",
-    "hasContactForm":  true,
-    "expectedNavItems":  [
-
-                         ],
-    "viewports":  [
-                      "desktop",
-                      "mobile",
-                      "tablet"
-                  ],
-    "skipVisual":  false,
-    "skipForms":  false,
-    "auth":  {
-                 "required":  false,
-                 "loginUrl":  "",
-                 "username":  "",
-                 "password":  ""
-             }
+    "name": "CustomerHub",
+    "url": "https://www.customerhub.com",
+    "description": "Membership site and content management platform for coaches, consultants, and small businesses",
+    "industry": "B2B SaaS / EdTech",
+    "hasContactForm": true,
+    "expectedNavItems": [
+        "Case Studies",
+        "Features",
+        "Pricing",
+        "Integrations",
+        "Support",
+        "Resources",
+        "Partner Programs"
+    ],
+    "viewports": [
+        "desktop",
+        "mobile",
+        "tablet"
+    ],
+    "skipVisual": false,
+    "skipForms": false,
+    "auth": {
+        "required": false,
+        "loginUrl": "",
+        "username": "",
+        "password": ""
+    }
 }

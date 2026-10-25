@@ -116,10 +116,7 @@ test.describe('Pricing Functional @functional', () => {
 
     test('/pricing page has billing frequency toggle @functional', async ({ pricingPage }) => {
       const hasToggle = await pricingPage.isBillingToggleVisible();
-      if (!hasToggle) {
-        console.warn('[functional] Billing toggle not found on /pricing — may be annual-only display.');
-        return;
-      }
+      test.skip(!hasToggle, 'Billing toggle not found on /pricing — may be annual-only display');
       expect(hasToggle, 'Annual/monthly billing toggle should be visible on pricing page').toBeTruthy();
     });
 
@@ -132,10 +129,7 @@ test.describe('Pricing Functional @functional', () => {
 
       // Get a price element before toggling
       const priceLocator = page.locator('[class*="price" i]:has-text("$")').first();
-      if (await priceLocator.count() === 0) {
-        console.warn('[functional] Could not find price elements to compare toggle behavior.');
-        return;
-      }
+      test.skip(await priceLocator.count() === 0, 'Could not find price elements to compare toggle behavior');
 
       const priceBefore = await priceLocator.textContent();
       await pricingPage.selectMonthlyBilling();

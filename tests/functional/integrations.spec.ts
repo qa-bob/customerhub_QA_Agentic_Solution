@@ -82,7 +82,7 @@ test.describe('Integrations Functional @functional', () => {
     ).catch(() => null);
 
     if (!response) {
-      console.warn('[functional] /integrations page unreachable — may be under a different URL.');
+      test.skip(true, '/integrations page unreachable — may be under a different URL');
       return;
     }
 

@@ -114,10 +114,7 @@ test.describe('Homepage Functional @functional', () => {
       '[class*="quote-text" i], [class*="testimonial-body" i]'
     );
 
-    if (await quotes.count() === 0) {
-      console.warn('[functional] Could not locate testimonial quote text elements — skipping.');
-      return;
-    }
+    test.skip(await quotes.count() === 0, 'Could not locate testimonial quote text elements');
 
     const firstQuote = await quotes.first().textContent();
     expect(
@@ -154,10 +151,7 @@ test.describe('Homepage Functional @functional', () => {
       '[class*="story" i] h3, [class*="story" i] h4'
     );
 
-    if (await caseStudyCards.count() === 0) {
-      console.warn('[functional] Could not find case study card titles — skipping.');
-      return;
-    }
+    test.skip(await caseStudyCards.count() === 0, 'Could not find case study card titles');
 
     const count = await caseStudyCards.count();
     expect(count, 'Expected at least 3 case study titles').toBeGreaterThanOrEqual(3);
